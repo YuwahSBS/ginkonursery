@@ -1,0 +1,141 @@
+.two-banner-area {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .banner-content {
+    color: #fff;
+    text-align: left;
+    //max-width: 600px;
+    text-align:center;
+
+
+    span {
+      font-size: 18px;
+      display: block;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 10px 0 35px 0;
+      line-height: unset;
+      font-weight: bold;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #ffffffed;
+      text-transform: uppercase;
+    }
+
+    .banner-con{
+      bottom: unset;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    }
+
+    .banner-btn {
+      margin-top: 25px;
+
+      a {
+        padding: 9px 36px;
+        background: #fff;
+        color: #2E401C;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+        font-size:18px;
+        &:hover {
+          background: #848C46;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Custom Arrows */
+.custom-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+
+  button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+
+/* Custom Dots */
+.owl-theme .owl-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+
+    span {
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      display: block;
+      transition: 0.3s;
+    }
+
+    &.active span {
+      background: #34c38f;
+    }
+  }
+}
+
+.owl-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(#2E401C, .35);
+}
+
+.two-banner-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.two-banner-slider {
+  width: 100%;
+
+  .two-banner-area {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    @media (max-width: 768px) {
+      min-height: 80vh;
+    }
+  }
+}

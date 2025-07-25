@@ -1,0 +1,225 @@
+<app-header></app-header>
+<section class="page-title-area pos-rel" style="background-image: url(../../../../assets/img/banner2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="page-title text-center pt-180">
+                    <h2>{{pageTitle}}</h2>
+                    <!-- <div class="breadcrumb-list text-center">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li>All Projects</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="design" class="sub-list ">
+    <div class="container">
+        <h2>Commercial (Office, Shopping)</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let commercial_ of commercial" [routerLink]="['/' + commercial_.mcategory + '/' + commercial_.scategory + '/' + commercial_.title]" loading="lazy">
+                <div class="offer-style-card">
+                    <div class="offer-image"><img class="img-fluid" [src]="commercial_.img[0]" alt="">
+                    </div>
+                    <div class="offer-content">
+                        <h3>{{commercial_.title}}</h3><a href="#">@{{commercial_.location}}&nbsp;&nbsp;
+                           <img src="../../../assets/img/right-arrow.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Residential (Condo)</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let residential_condo_ of residential_condo" [routerLink]="['/' + residential_condo_.mcategory + '/' + residential_condo_.scategory + '/' + residential_condo_.title]" loading="lazy">
+                <div class="offer-style-card">
+                    <div class="offer-image"><img class="img-fluid" [src]="residential_condo_.img[0]" alt="">
+                    </div>
+                    <div class="offer-content">
+                        <h3>{{residential_condo_.title}}</h3><a href="#">@{{residential_condo_.location}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Private Residential (Home, Apartment)</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let private_residential_ of private_residential" [routerLink]="['/' + private_residential_.mcategory + '/' + private_residential_.scategory + '/' + private_residential_.title]" loading="lazy">
+                <div class="offer-style-card">
+                    <div class="offer-image"><img class="img-fluid" [src]="private_residential_.img[0]" alt="">
+                    </div>
+                    <div class="offer-content">
+                        <h3>{{private_residential_.title}}</h3><a href="#">@{{private_residential_.location}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Education (Schools)</h2>
+        <div class="row" style="margin-bottom:50px;">
+            <div class="col-md-4" *ngFor="let education_ of education" [routerLink]="['/' + education_.mcategory + '/' + education_.scategory + '/' + education_.title]" loading="lazy">
+                <div class="offer-style-card">
+                    <div class="offer-image">
+                        <img class="img-fluid" [src]="education_.img[0]" alt="">
+                    </div>
+                    <div class="offer-content">
+                        <h3>{{education_.title}}</h3><a href="#">@{{education_.location}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <h2>Conservation / Refurbishment</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let conservation_ of conservation" [routerLink]="['/' + conservation.mcategory + '/' + conservation.scategory + '/' + conservation.title]" loading="lazy">
+                <div class="offer-style-card">
+                    <div class="offer-image"><img class="img-fluid" [src]="conservation_.img[0]">
+                    </div>
+                    <div class="offer-content">
+                        <h3>{{conservation_.title}}</h3><a href="#">@{{conservation_.location}}</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    </section>
+
+    <section *ngIf="implementation" class="sub-list ">
+        <div class="container">
+            <h2>Commercial (Office, Shopping)</h2>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let commercial_ of commercial" [routerLink]="['/' + commercial_.mcategory + '/' + commercial_.scategory + '/' + commercial_.title]" loading="lazy">
+                    <div class="offer-style-card">
+                        <div class="offer-image"><img class="img-fluid" [src]="commercial_.img[0]" alt="">
+                        </div>
+                        <div class="offer-content">
+                            <h3>{{commercial_.title}}</h3><a href="#">@{{commercial_.location}}&nbsp;&nbsp;
+                               <img src="../../../assets/img/right-arrow.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Residential (Condo)</h2>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let residential_condo_ of residential_condo" [routerLink]="['/' + residential_condo_.mcategory + '/' + residential_condo_.scategory + '/' + residential_condo_.title]" loading="lazy">
+                    <div class="offer-style-card">
+                        <div class="offer-image"><img class="img-fluid" [src]="residential_condo_.img[0]" alt="">
+                        </div>
+                        <div class="offer-content">
+                            <h3>{{residential_condo_.title}}</h3><a href="#">@{{residential_condo_.location}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Private Residential (Home, Apartment)</h2>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let private_residential_ of private_residential" [routerLink]="['/' + private_residential_.mcategory + '/' + private_residential_.scategory + '/' + private_residential_.title]" loading="lazy">
+                    <div class="offer-style-card">
+                        <div class="offer-image"><img class="img-fluid" [src]="private_residential_.img[0]" alt="">
+                        </div>
+                        <div class="offer-content">
+                            <h3>{{private_residential_.title}}</h3><a href="#">@{{private_residential_.location}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Education (Schools)</h2>
+            <div class="row" style="margin-bottom:50px;">
+                <div class="col-md-4" *ngFor="let education_ of education" [routerLink]="['/' + education_.mcategory + '/' + education_.scategory + '/' + education_.title]" loading="lazy">
+                    <div class="offer-style-card">
+                        <div class="offer-image">
+                            <img class="img-fluid" [src]="education_.img[0]" alt="">
+                        </div>
+                        <div class="offer-content">
+                            <h3>{{education_.title}}</h3><a href="#">@{{education_.location}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <h2>Conservation / Refurbishment</h2>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let conservation_ of conservation" [routerLink]="['/' + conservation.mcategory + '/' + conservation.scategory + '/' + conservation.title]" loading="lazy">
+                    <div class="offer-style-card">
+                        <div class="offer-image"><img class="img-fluid" [src]="conservation_.img[0]">
+                        </div>
+                        <div class="offer-content">
+                            <h3>{{conservation_.title}}</h3><a href="#">@{{conservation_.location}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        </section>
+
+        <section *ngIf="careandmaintenance" class="sub-list ">
+            <div class="container">
+                <h2>Commercial (Office, Shopping)</h2>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let commercial_ of commercial" [routerLink]="['/' + commercial_.mcategory + '/' + commercial_.scategory + '/' + commercial_.title]" loading="lazy">
+                        <div class="offer-style-card">
+                            <div class="offer-image"><img class="img-fluid" [src]="commercial_.img[0]" alt="">
+                            </div>
+                            <div class="offer-content">
+                                <h3>{{commercial_.title}}</h3><a href="#">@{{commercial_.location}}&nbsp;&nbsp;
+                                   <img src="../../../assets/img/right-arrow.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Residential (Condo)</h2>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let residential_condo_ of residential_condo" [routerLink]="['/' + residential_condo_.mcategory + '/' + residential_condo_.scategory + '/' + residential_condo_.title]" loading="lazy">
+                        <div class="offer-style-card">
+                            <div class="offer-image"><img class="img-fluid" [src]="residential_condo_.img[0]" alt="">
+                            </div>
+                            <div class="offer-content">
+                                <h3>{{residential_condo_.title}}</h3><a href="#">@{{residential_condo_.location}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Private Residential (Home, Apartment)</h2>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let private_residential_ of private_residential" [routerLink]="['/' + private_residential_.mcategory + '/' + private_residential_.scategory + '/' + private_residential_.title]" loading="lazy">
+                        <div class="offer-style-card">
+                            <div class="offer-image"><img class="img-fluid" [src]="private_residential_.img[0]" alt="">
+                            </div>
+                            <div class="offer-content">
+                                <h3>{{private_residential_.title}}</h3><a href="#">@{{private_residential_.location}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Education (Schools)</h2>
+                <div class="row" style="margin-bottom:50px;">
+                    <div class="col-md-4" *ngFor="let education_ of education" [routerLink]="['/' + education_.mcategory + '/' + education_.scategory + '/' + education_.title]" loading="lazy">
+                        <div class="offer-style-card">
+                            <div class="offer-image">
+                                <img class="img-fluid" [src]="education_.img[0]" alt="">
+                            </div>
+                            <div class="offer-content">
+                                <h3>{{education_.title}}</h3><a href="#">@{{education_.location}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <h2>Conservation / Refurbishment</h2>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let conservation_ of conservation" [routerLink]="['/' + conservation.mcategory + '/' + conservation.scategory + '/' + conservation.title]" loading="lazy">
+                        <div class="offer-style-card">
+                            <div class="offer-image"><img class="img-fluid" [src]="conservation_.img[0]">
+                            </div>
+                            <div class="offer-content">
+                                <h3>{{conservation_.title}}</h3><a href="#">@{{conservation_.location}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            </section>
+
+
+<app-footer></app-footer>

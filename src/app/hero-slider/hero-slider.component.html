@@ -1,0 +1,36 @@
+<div class="two-banner-wrap">
+  <div class="two-banner-slider owl-carousel owl-theme">
+    <div
+    class="two-banner-area"
+    *ngFor="let slide of slides; let i = index"
+    [ngStyle]="{ 'background-image': 'url(' + slide.background + ')' }"
+  >
+      <div class="d-table">
+        <div class="d-table-cell">
+          <div class="container banner-con">
+            <div class="banner-content" #contentBox>
+              <span>{{ slide.subtitle }}</span>
+              <h1>{{ slide.title }}</h1>
+              <div class="banner-btn">
+                <a class="cmn-banner-btn" (click)="navigate('projects')">
+                  SEE PROJECT <i class="bx bx-right-arrow-alt"></i> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Custom Arrows -->
+  <div class="custom-nav">
+    <button class="nav-prev">
+      <!-- <i class="bx bx-chevron-left"></i> -->
+       <img src="../../assets/img/chevron-left.png" alt="">
+    </button>
+    <button class="nav-next">
+      <!-- <i class="bx bx-chevron-right"></i> -->
+      <img src="../../assets/img/chevron-right.png" alt="">
+    </button>
+  </div>
+</div>
