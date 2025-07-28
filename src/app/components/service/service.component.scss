@@ -6,7 +6,10 @@
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 160px;
+    min-height: 270px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 
 .one-among-area .among-item .among-bottom p{

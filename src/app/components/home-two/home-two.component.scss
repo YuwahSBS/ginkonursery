@@ -49,3 +49,19 @@
         }
     }
 }
+
+ @media (max-width: 768px) {
+     .one-section-title h2{
+      font-size:30px;
+     }
+     .four-expect-area .expect-item{
+      padding: 20px 30px;
+      margin-bottom: 15px;
+     }
+     .counter-item h4{
+      font-size:30px;
+     }
+     .footer-sub .counter-item H4{
+      font-size:30px;
+     }
+    }

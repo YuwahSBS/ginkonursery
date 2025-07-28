@@ -134,8 +134,17 @@
     background-position: center;
     min-height: 100vh;
 
-    @media (max-width: 768px) {
-      min-height: 80vh;
-    }
+   
   }
 }
+
+ @media (max-width: 768px) {
+
+      .two-banner-area .banner-content h1{
+        font-size: 30px;
+      }
+
+      .custom-nav{
+        padding:0;
+      }
+    }

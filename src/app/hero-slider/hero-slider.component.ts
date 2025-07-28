@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, QueryList, ViewChildren, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import gsap from 'gsap';
 declare var $: any;
 
@@ -29,6 +30,9 @@ declare var $: any;
   ];
 
   @ViewChildren('contentBox') contentBoxes!: QueryList<ElementRef>;
+  constructor(private router : Router){
+
+  }
 
  ngAfterViewInit(): void {
   const owl = $('.two-banner-slider');
@@ -89,7 +93,7 @@ declare var $: any;
     );
   }
 
-  navigate(path: string) {
-    console.log('Navigate to', path);
+    navigate(param : any){
+    this.router.navigate(['/' + param])
   }
 }

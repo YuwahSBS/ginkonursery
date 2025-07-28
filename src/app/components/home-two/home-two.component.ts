@@ -58,9 +58,9 @@ ngAfterViewInit(): void {
       case 'zoom-in':
         fromVars = { scale: 0.5, opacity: 0 };
         break;
-      case 'slide-left': // NEW CASE
-      fromVars = { x: -100 }; // No opacity change if you want a pure slide
-      break;
+      case 'slide-left':
+        fromVars = { x: -100 };
+        break;
       default:
         fromVars = { opacity: 0 };
     }
@@ -86,6 +86,10 @@ ngAfterViewInit(): void {
       }
     );
   });
+
+  // ✅ Force GSAP to refresh ScrollTrigger positions
+  ScrollTrigger.refresh();
 }
+
 
 }
