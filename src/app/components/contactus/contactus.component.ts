@@ -9,6 +9,7 @@ import { catchError } from 'rxjs/operators';
 import Validation from '../utility';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { ProductService } from 'app/services/product.service';
 
 @Component({
   selector: 'app-contactus',
@@ -23,7 +24,7 @@ export class ContactusComponent implements OnInit {
   email;
   form: FormGroup;
 submitted: boolean = false;
-isVisible: boolean = false;  
+isVisible: boolean = false; 
 
  
 
@@ -33,7 +34,8 @@ isVisible: boolean = false;
     private http: HttpService, 
     private formBuilder: FormBuilder,
     private spinner: NgxSpinnerService,
-    private toastr: ToastrService) {
+    private toastr: ToastrService,
+    private productService: ProductService) {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       name: ['', [Validators.required]],
@@ -63,6 +65,8 @@ showAlert() : void {
   ngOnInit(): void {
     //this.sendMessage()
   }
+
+  
 
   // sendMessage(formData: NgForm){
   //   this.loading = true;

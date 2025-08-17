@@ -1,38 +1,15 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 <section class="page-title-area pos-rel" style="background-image: url(../../../../assets/img/banner2.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2">
                 <div class="page-title text-center pt-180">
                     <h2>Our Projects</h2>
-                    <!-- <div class="breadcrumb-list text-center">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li>All Projects</li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- <div class="one-among-area two-among-area">
-    <div class="container">
-        <div class="one-section-title">
-            <span class="sub-title">WHAT WE HAVE DONE</span>
-
-            <div>
-                <h2 tooltip="This is to protect the privacy of our clients who do not wish to disclose
-             any photo of their projects of private residence." flow="down">Selected Projects (Only)</h2>
-            </div>
-
-
-        </div>
-
-       
-    </div>
-</div> -->
 
 <section class="three-loan-area four-loan-area five-loan-area pt-100">
     <div class="container">
@@ -40,36 +17,6 @@
             <span class="sub-title">What We have done</span>
             <h2 id="landscapesection">Selected Projects (Only)</h2>
         </div>
-
-        <!-- <div class="sorting-menu">
-            <ul>
-                <li class="filter" (click)="navigate('projects')"
-                    [ngClass]="{'active' : routeLink.includes('projects')}" id="project"><span>All Projects</span></li>
-                <li class="filter" (click)="navigate('artificial-landscaping')"
-                    [ngClass]="{'active' : routeLink.includes('artificial-landscaping')}"><span>Artificial
-                        Landscaping</span></li>
-                <li class="filter" (click)="navigate('landscape-supply-install')"
-                    [ngClass]="{'active' : routeLink.includes('landscape-supply-install')}"><span>Landscape Supply
-                        Install</span></li>
-                <li class="filter" (click)="navigate('plant-nursery')"
-                    [ngClass]="{'active' : routeLink.includes('plant-nursery')}"><span>Plant Nursery</span></li>
-
-            </ul>
-        </div> -->
-
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <div class="offer-style-card">
-                    <div class="offer-image"><img
-                            src="https://levi-ng.hibootstrap.com/assets/img/more-home/offer/offer-1.jpg" alt="image">
-                    </div>
-                    <div class="offer-content">
-                        <h3>Delivering A Great Customer Experience</h3><a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div> -->
 
         <div class="service-advisor">
             <div class="row align-items-center">
@@ -121,37 +68,28 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="row">
-            <div class="col-sm-6 col-lg-4" *ngFor="let project of projects"
-                [routerLink]="['/' + project.category + '/' + project.title]" loading="lazy">
-                <app-projects [project]="project"></app-projects>
-            </div>
-        </div> -->
-
-
-        <!-- <div id="Container" class="row">
-            <div class="col-sm-6 col-lg-3 mix tyre">
-                <div class="loan-item">
-                    <span>Home Loan</span>
-                    <h3>A  Conventional Home Loan</h3>
-                    <p>Migration do amet contur diisci velit suia nonnua</p>
-                    <a routerLink="/home-five">READ MORE <i class='bx bx-right-arrow-alt'></i></a>
-                </div>  
-            </div>
-
-            <div class="col-sm-6 col-lg-3 mix tyre web">
-                <div class="loan-item">
-                    <span>Renovation Loans</span>
-                    <h3>Renovation Loans For Buyers</h3>
-                    <p>Migration do amet contur diisci velit suia nonnua</p>
-                    <a routerLink="/home-five">READ MORE <i class='bx bx-right-arrow-alt'></i></a>
-                </div>  
-            </div>
-
-        </div> -->
     </div>
-</section>
-
-
+</section> 
 <app-footer></app-footer>
+-->
+
+<ul>
+   <li *ngFor="let product of products">
+        {{product.name}} - {{product.price}}
+        <button (click)="deleteProduct(product.id)">Delete</button>
+        <a>Edit</a>
+   </li> 
+</ul>
+
+<div class="container">
+<form class="form-control" (ngSubmit)="save()">
+    <label>Name:</label>
+    <input [(ngModel)]="products.name" name="name"/>
+    <br/>
+    <label>Price</label>
+    <input [(ngModel)]="products.price" name="price"/>
+    <br/>
+    <button type="submit">{{ isEdit ? 'update' : 'create' }} </button>
+</form>
+
+</div>

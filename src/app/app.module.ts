@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectSubListsComponent } from './components/project-sub-lists/project-sub-lists.component';
 import { HeroSliderComponent } from './hero-slider/hero-slider.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ProductTestComponent } from './product-test/product-test.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ProjectListsComponent,
     ContactFormComponent,
     ProjectSubListsComponent,
-    HeroSliderComponent
+    HeroSliderComponent,
+    ProductTestComponent
   ],
   imports: [
     BrowserModule,

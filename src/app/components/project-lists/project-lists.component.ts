@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { element } from 'protractor';
 import { ProjectlistService } from '../projectlist.service';
+import { ProductService } from 'app/services/product.service';
 
 @Component({
   selector: 'app-project-lists',
@@ -19,6 +20,9 @@ export class ProjectListsComponent implements OnInit {
   cat;
   routeLink: string = ''
 
+  products: {name: '', price: 0}
+  isEdit = false
+
   activeState: boolean[] = [true, false, false];
   grouped: { [key: string]: any } = {};
   constructor(
@@ -27,6 +31,7 @@ export class ProjectListsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private location: Location,
     private scroller: ViewportScroller,
+    private productService: ProductService
   ) {
     this.grouped = this.projectlist_.ProjectList.reduce((group, current) => {
       //create your grouping key, by which you want to group the items
@@ -61,7 +66,34 @@ export class ProjectListsComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    this.loadProducts()
   }
+
+  //test
+  loadProducts(){
+    this.productService.getProducts().subscribe((data)=>{
+      this.products = data;
+      console.log(this.products, 'productlist')
+    })
+  }
+
+  deleteProduct(id){
+    this.productService.deleteProduct(id).subscribe(()=>[
+      this.loadProducts()
+    ])
+  }
+
+  save(){
+    if(!this.isEdit){
+      this.productService.createProduct(this.products).subscribe(()=>{
+      this.loadProducts()
+      this.router.navigate(['/test']);
+    })
+    }
+    
+  }
+
+  //endtest
 
   getallprojects() {
     this.projects = this.projectlist_.ProjectList

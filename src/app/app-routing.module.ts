@@ -9,6 +9,7 @@ import { ProjectListsComponent } from './components/project-lists/project-lists.
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ServiceComponent } from './components/service/service.component';
 import { HeroSliderComponent } from './hero-slider/hero-slider.component';
+import { ProductTestComponent } from './product-test/product-test.component';
 
 const routes: Routes = [
     { path: '', component: HomeTwoComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
     //{ path: ':cat/:name', component: ProjectDetailComponent },
     { path: ':cat', component: ProjectListsComponent },
     { path: ':mcat/:scat/:pname', component: ProjectDetailComponent},
-    { path: 'sliderTest', component: HeroSliderComponent}
+    { path: 'sliderTest', component: HeroSliderComponent},
+    { path: 'test', component: ProductTestComponent}
 ];
 
 @NgModule({
