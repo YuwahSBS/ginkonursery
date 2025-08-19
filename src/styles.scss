@@ -4729,6 +4729,7 @@ button {
         border-radius: 15px;
         padding: 30px;
         transition: all 0.5s;
+        min-height: 280px;
         &:hover
         &.active {
             // background-color: #e4e4e4;
