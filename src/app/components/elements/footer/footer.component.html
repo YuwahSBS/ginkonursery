@@ -1,15 +1,6 @@
 <footer class="one-footer-area">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                    <div class="footer-logo">
-                        <a routerLink="/"><img src="assets/img/logo.png" alt="Logo"></a>
-
-                    </div>
-                </div>
-            </div>
-
             <div class="col-sm-6 col-lg-4">
                 <div class="footer-item">
                     <div class="footer-address">
@@ -19,11 +10,11 @@
                         <ul>
                             <li>
                                 <i class='bx bx-phone-call'></i>
-                                <a href="tel:+959421037785">09 42103 7785 (Burmese)</a>
+                                <a href="tel:+959421037785"><span class="num">09 42103 7785</span> (Burmese)</a>
                             </li>
                             <li>
                                 <i class='bx bx-phone-call'></i>
-                                <a href="tel:+959421107028">09 42110 7028 (Eng)</a>
+                                <a href="tel:+959421107028"><span class="num">09 42110 7028 (Eng)</span></a>
                             </li>
                             <li>
                                 <i class='bx bx-message-square-detail'></i>
@@ -35,7 +26,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-4">
                 <div class="footer-item footer-item-link">
                     <div class="footer-quick">
                         <h3>Quick Links</h3>
@@ -47,24 +38,57 @@
                             <li><a (click)="navigate('contactus')">Contact Us</a></li>
 
                         </ul>
+                        
                     </div>
+                </div>
+                <div class="footer-item" style="margin-left:35px;">
+                     <div class="footer-logo">
+                            <ul>
+                                <li><a href="https://www.facebook.com/ginkonursery" target="_blank"><i
+                                            class='bx bxl-facebook'></i></a></li>
+                                <li><a href="https://www.instagram.com/ginkonursery/?hl=en" target="_blank"><i
+                                            class='bx bxl-instagram'></i></a></li>
+                                <!-- <li><a href="#" target="_blank"><i class='bx bxl-slack'></i></a></li> -->
+
+                            </ul>
+                        </div>
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-2">
+            <!-- <div class="col-sm-6 col-lg-2">
                 <div class="footer-item">
                     <h3>Connect with Us</h3>
-                    <div class="footer-logo">
+                   
+                </div>
+            </div> -->
 
-                        <ul>
-                            <li><a href="https://www.facebook.com/ginkonursery" target="_blank"><i
-                                        class='bx bxl-facebook'></i></a></li>
-                            <li><a href="https://www.instagram.com/ginkonursery/?hl=en" target="_blank"><i
-                                        class='bx bxl-instagram'></i></a></li>
-                            <!-- <li><a href="#" target="_blank"><i class='bx bxl-slack'></i></a></li> -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="footer-item">
+                     <h3>Instagram Feed</h3>
+                     <div class="insta">
+                        <div class="">
+                            <img src="../../../../assets/img/project1.png" alt="">
+                        </div>
+                        <div class="">
+                            <img src="../../../../assets/img/project2.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="../../../../assets/img/project3.jpg" alt="">
+                        </div>
+                         <div class="">
+                            <img src="../../../../assets/img/project4.jpg" alt="">
+                        </div>
+                         <div class="">
+                            <img src="../../../../assets/img/project5.jpg" alt="">
+                        </div>
+                         <div class="">
+                            <img src="../../../../assets/img/project6.jpg" alt="">
+                        </div>
+                     </div>
+                    <!-- <div class="footer-logo">
+                        <a routerLink="/"><img src="assets/img/logo.png" alt="Logo"></a>
 
-                        </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -76,7 +100,7 @@
 
                 <div class="col-lg-12">
                     <div class="copyright-item">
-                        <p>Copyright @2025 Ginko Nursery. All Right Reserved.</p>
+                        <p>Copyright @<span class="num">2025</span> Ginko Nursery. All Right Reserved.</p>
                     </div>
                 </div>
             </div>

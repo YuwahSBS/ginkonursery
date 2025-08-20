@@ -1,5 +1,7 @@
 .navbar-light .navbar-nav .nav-link {
     cursor: pointer;
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
@@ -20,7 +22,35 @@
 	z-index: 1000;
 	-webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    display:unset;
 }
+
+hr{
+    background-color: #55555552;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+
+.topbar {
+    a{
+        color: #636363;
+    }
+    span.num{
+        font-family: 'Tahoma';
+        font-size:14px;
+    }
+    i{
+        font-size:19px;
+        padding-right:12px;
+        color:#8bc052; 
+    }
+
+}
+
+    .space{
+        margin: 0 25px;
+        color: #63636340;
+    }
 
 
 
@@ -167,7 +197,7 @@ div.stroke ul li a:after {
 
 .scroll-on{
     //background-color: rgba(255, 255, 255, .95);
-    background-color: #374836;
+    background-color: #fffffff5;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
     // ul.navbar-nav{
     //     li{
@@ -178,6 +208,6 @@ div.stroke ul li a:after {
     // }
 }
 
-.start-style{
-	background-color: transparent;
-}
+// .start-style{
+// 	background-color: transparent;
+// }

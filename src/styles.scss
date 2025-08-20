@@ -233,7 +233,8 @@ button {
 .navbar-light {
     padding-left: 55px;
     padding-right: 55px;
-    background-color: rgb(0 0 0 / 19%);
+    //background-color: rgb(0 0 0 / 19%);
+    background-color: #fbfbfbe3;
    // box-shadow:0px 20px 20px 0px rgb(93 92 92 / 32%);
     .navbar-nav {
         .nav-link {
@@ -246,12 +247,12 @@ button {
         .nav-link.show,
         .show>.nav-link {
             opacity: 0.65;
-            color:#fff;
+            color:#8bc052;
         }
         .nav-link:focus,
         .nav-link:hover {
             opacity: 0.65;
-            color: #fff;
+            color: #8bc052;
         }
         .nav-link:focus,
         .nav-link:hover {
@@ -2348,6 +2349,45 @@ button {
         left: 0;
         //background: $gradient-green;
         background:#fbf6ed;
+        z-index: -1;
+        border-radius: 2px;
+        transition: $transition;
+    }
+    i {
+        display: inline-block;
+        font-size: 20px;
+        vertical-align: middle;
+        // position: relative;
+        // top: 5px;
+        // margin-right: 4px;
+    }
+    &:hover {
+        color: $white-color;
+        &:before {
+            width: 0;
+        }
+    }
+}
+
+.cmn-banner-btn-green {
+    color: #fff;
+    position: relative;
+    background-color: $black-color;
+    z-index: 1;
+    padding: 12px 25px 10px;
+    border-radius: 1px;
+    font-size: 16px;
+    display: inline-block;
+    cursor:pointer;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        //background: $gradient-green;
+        background:#8bc052;
         z-index: -1;
         border-radius: 2px;
         transition: $transition;
@@ -7189,12 +7229,14 @@ button {
 }
 
 .navbar-light .navbar-nav .nav-link{
-	color: #f9fbf3;
+	//color: #f9fbf3;
+    color: #000;
 	background-color: transparent;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-	color: #f9fbf3;
+	//color: #f9fbf3;
+    color: #000;
     opacity: 0.65;
 }
 
